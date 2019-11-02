@@ -3,8 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <title>Secret Message Generator</title>
+    <script type="module" src="./node_modules/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="./node_modules/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="./node_modules/@ionic/core/css/ionic.bundle.css"/>
 </head>
 <body>
+
+<ion-app>
+    <ion-header>
+        <ion-toolbar>
+            <ion-buttons slot="start">
+                <ion-back-button></ion-back-button>
+            </ion-buttons>
+            <ion-title>Secret Message Generator</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+
+        <ion-card>
+            <ion-card-header>
+                <ion-card-title>
+                    Welcome to a simple secrete text generator app.
+                </ion-card-title>
+                <ion-card-subtitle>
+                    This little app lets you encode your text message.
+                    Such that you could sent it to an friend how knows how to decode it or
+                    you could also challenge your friends by letting them figure it out themselves.
+                </ion-card-subtitle>
+
+                <ion-card-content>
+                    Currently there is only one alphabet shift encoder.
+                    I do not plan to add new encoders, but if anyone is interested in doing so, they can send me a pull
+                    request.
+                    I'll be happy to add new encoders.
+                </ion-card-content>
+            </ion-card-header>
+        </ion-card>
+
+        <ion-card>
+            <ion-card-header>
+                <ion-card-title>
+                    Alphabet shift
+                </ion-card-title>
+                <ion-card-subtitle>
+                    This encoder will shift each letter of the message by the shift you desire.
+                    Only alphabetic letters a to z are encoded, all other letters will be ignored. Further, all letters
+                    will be converted to lowercase before encoding.
+                </ion-card-subtitle>
+
+                <ion-card-content>
+                    <ion-card>
+                        <ion-item>
+                            <ion-label position="floating">Message</ion-label>
+                            <ion-textarea auto-grow="true"></ion-textarea>
+                        </ion-item>
+                    </ion-card>
+                    <ion-card>
+                        <ion-card-subtitle>
+                            Encoded Message
+                        </ion-card-subtitle>
+                        <ion-card-content>
+                            Nothing.
+                        </ion-card-content>
+                    </ion-card>
+                </ion-card-content>
+            </ion-card-header>
+        </ion-card>
+    </ion-content>
+    <ion-footer>
+        <ion-toolbar>
+            <ion-title>
+                Fork me on
+                <a href="https://github.com/FUUbi/secret-message-generator">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+            </ion-title>
+        </ion-toolbar>
+    </ion-footer>
+
+</ion-app>
 
 </body>
 </html>
