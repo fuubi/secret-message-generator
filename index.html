@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
     <title>Secret Message Generator</title>
     <script type="module" src="./node_modules/@ionic/core/dist/ionic/ionic.esm.js"></script>
     <script nomodule src="./node_modules/@ionic/core/dist/ionic/ionic.js"></script>
@@ -55,7 +58,7 @@
                     <ion-card>
                         <ion-item>
                             <ion-label position="floating">Message</ion-label>
-                            <ion-textarea auto-grow="true"></ion-textarea>
+                            <ion-textarea auto-grow="true" id="alphabet-shift-textarea"></ion-textarea>
                         </ion-item>
                     </ion-card>
                     <ion-card>
@@ -63,7 +66,9 @@
                             Encoded Message
                         </ion-card-subtitle>
                         <ion-card-content>
-                            Nothing.
+                            <ion-text color="dark" id="alphabet-shift-encoded-message">
+                                Please type something into the message box above.
+                            </ion-text>
                         </ion-card-content>
                     </ion-card>
                 </ion-card-content>
@@ -83,5 +88,6 @@
 
 </ion-app>
 
+    <script src="./encoders/alphabet-shift.js"></script>
 </body>
 </html>
