@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/FUUbi/secret-message-generator/issues"
   },
-  "homepage": "https://github.com/FUUbi/secret-message-generator#readme"
+  "homepage": "https://github.com/FUUbi/secret-message-generator#readme",
+  "dependencies": {
+    "@ionic/core": "^4.11.3"
+  }
 }
