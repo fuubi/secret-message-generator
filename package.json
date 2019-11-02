@@ -1,0 +1,24 @@
+{
+  "name": "secret-message-generator",
+  "version": "1.0.0",
+  "description": "Encode text messages",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FUUbi/secret-message-generator.git"
+  },
+  "keywords": [
+    "Message",
+    "Encoder",
+    "Secret"
+  ],
+  "author": "Fuubi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FUUbi/secret-message-generator/issues"
+  },
+  "homepage": "https://github.com/FUUbi/secret-message-generator#readme"
+}
