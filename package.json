@@ -4,6 +4,7 @@
   "description": "Encode text messages",
   "main": "index.html",
   "scripts": {
+    "start": "http-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,5 +24,8 @@
   "homepage": "https://github.com/FUUbi/secret-message-generator#readme",
   "dependencies": {
     "@ionic/core": "^4.11.3"
+  },
+  "devDependencies": {
+    "http-server": "^0.11.1"
   }
 }
