@@ -1,5 +1,7 @@
 textInputElement = document.getElementById('alphabet-shift-textarea');
 encodedMessage = document.getElementById('alphabet-shift-encoded-message')
+shiftRange = document.getElementById('alphabet-shift-range')
+shiftLabel = document.getElementById('alphabet-shift-label')
 
 const shiftAlphabetBy = (shift, message) => {
 
@@ -83,12 +85,19 @@ const shiftAlphabetBy = (shift, message) => {
     return shiftedMessage
 }
 
-textInputElement.addEventListener('ionInput', event => {
-    let rawMessage = event.target.textContent
-    if (rawMessage.length <= 1) {
+const updateAlphabetShift = (rawMessage, shift) => {
+    if (rawMessage.length < 1) {
         encodedMessage.innerText = 'Please type something into the message box above.';
         return;
     }
+    this.encodedMessage.innerText = shiftAlphabetBy(shift, rawMessage)
+}
 
-    this.encodedMessage.innerText = shiftAlphabetBy(25, rawMessage)
+textInputElement.addEventListener('ionChange', event => {
+    updateAlphabetShift(event.detail.value, shiftRange.value)
+});
+
+shiftRange.addEventListener('ionChange', event => {
+    shiftLabel.innerText = `Shift by ${event.target.value}`
+    updateAlphabetShift(textInputElement.textContent,  shiftRange.value)
 });
