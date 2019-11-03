@@ -1,1 +1,6 @@
-# secret-message-generator
+# Secret Message Generator
+
+
+npm install 
+
+npm start
